@@ -12,7 +12,7 @@ Config.Zones = {
     Type  = 27,
   },
 
-  MecanoDuty = {
+  MechanicDuty = {
     Pos = { x = -343.8, y = -123.41, z = 38.01 },
     Size = { x = 2.5, y = 2.5, z = 1.5 },
     Color = { r = 204, g = 0, b = 0 },
