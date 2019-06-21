@@ -49,8 +49,8 @@ AddEventHandler('esx_duty:hasEnteredMarker', function (zone)
     CurrentActionMsg  = _U('duty')
     CurrentActionData = {}
   end
-  if zone == 'MecanoDuty' then
-    CurrentAction     = 'mecano_duty'
+  if zone == 'MechanicDuty' then
+    CurrentAction     = 'mechanic_duty'
     CurrentActionMsg  = _U('duty')
     CurrentActionData = {}
   end
@@ -90,10 +90,10 @@ Citizen.CreateThread(function ()
         end
       end
 
-        if CurrentAction == 'mecano_duty' then
-          if PlayerData.job.name == 'mecano' or PlayerData.job.name == 'offmecano' then
-            TriggerServerEvent('duty:mecano')
-          if PlayerData.job.name == 'mecano' then
+        if CurrentAction == 'mechanic_duty' then
+          if PlayerData.job.name == 'mechanic' or PlayerData.job.name == 'offmecano' then
+            TriggerServerEvent('duty:mechanic')
+          if PlayerData.job.name == 'mechanic' then
             sendNotification(_U('offduty'), 'success', 2500)
             Wait(1000)
           else
