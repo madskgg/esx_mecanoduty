@@ -2,34 +2,34 @@ ESX = nil
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
-RegisterServerEvent('duty:mecano')
-AddEventHandler('duty:mecano', function(job)
+RegisterServerEvent('duty:mechanic')
+AddEventHandler('duty:mechanic', function(job)
 
         local _source = source
         local xPlayer = ESX.GetPlayerFromId(_source)
 
-    if xPlayer.job.name == 'mecano' and xPlayer.job.grade == 0 then
+    if xPlayer.job.name == 'mechanic' and xPlayer.job.grade == 0 then
         xPlayer.setJob('offmecano', 0)
-	elseif xPlayer.job.name == 'mecano' and xPlayer.job.grade == 1 then
+	elseif xPlayer.job.name == 'mechanic' and xPlayer.job.grade == 1 then
         xPlayer.setJob('offmecano', 1)
-    elseif xPlayer.job.name == 'mecano' and xPlayer.job.grade == 2 then
+    elseif xPlayer.job.name == 'mechanic' and xPlayer.job.grade == 2 then
         xPlayer.setJob('offmecano', 2)
-    elseif xPlayer.job.name == 'mecano' and xPlayer.job.grade == 3 then
+    elseif xPlayer.job.name == 'mechanic' and xPlayer.job.grade == 3 then
         xPlayer.setJob('offmecano', 3)
-    elseif xPlayer.job.name == 'mecano' and xPlayer.job.grade == 4 then
+    elseif xPlayer.job.name == 'mechanic' and xPlayer.job.grade == 4 then
         xPlayer.setJob('offmecano', 4)
     end
 
 	if xPlayer.job.name == 'offmecano' and xPlayer.job.grade == 0 then
-        xPlayer.setJob('mecano', 0)
+        xPlayer.setJob('mechanic', 0)
     elseif xPlayer.job.name == 'offmecano' and xPlayer.job.grade == 1 then
-        xPlayer.setJob('mecano', 1)
+        xPlayer.setJob('mechanic', 1)
     elseif xPlayer.job.name == 'offmecano' and xPlayer.job.grade == 2 then
-        xPlayer.setJob('mecano', 2)
+        xPlayer.setJob('mechanic', 2)
     elseif xPlayer.job.name == 'offmecano' and xPlayer.job.grade == 3 then
-        xPlayer.setJob('mecano', 3)
+        xPlayer.setJob('mechanic', 3)
     elseif xPlayer.job.name == 'offmecano' and xPlayer.job.grade == 4 then
-        xPlayer.setJob('mecano', 4)
+        xPlayer.setJob('mechanic', 4)
     end
 end)
 
